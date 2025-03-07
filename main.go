@@ -5,6 +5,7 @@ import (
 	"github.com/gin-contrib/cors"
 	products "mi-tienda-online/src/products/infraestructure"
 	users "mi-tienda-online/src/users/infraestructure"
+	orders "mi-tienda-online/src/orders/infraestructure"
 	"github.com/gin-gonic/gin"
 )
 
@@ -20,5 +21,6 @@ func main() {
 	}))
 	products.Init(r)
 	users.Init(r)
+	orders.Init(r)
 	r.Run(":8080")
 }
