@@ -6,6 +6,7 @@ import (
 	products "mi-tienda-online/src/products/infraestructure"
 	users "mi-tienda-online/src/users/infraestructure"
 	orders "mi-tienda-online/src/orders/infraestructure"
+	order_items "mi-tienda-online/src/order_items/infraestructure"
 	"github.com/gin-gonic/gin"
 )
 
@@ -22,5 +23,6 @@ func main() {
 	products.Init(r)
 	users.Init(r)
 	orders.Init(r)
+	order_items.Init(r)
 	r.Run(":8080")
 }
