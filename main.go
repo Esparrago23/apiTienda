@@ -3,7 +3,8 @@ package main
 import (
 	"time"
 	"github.com/gin-contrib/cors"
-	"mi-tienda-online/src/products/infraestructure"
+	products "mi-tienda-online/src/products/infraestructure"
+	users "mi-tienda-online/src/users/infraestructure"
 	"github.com/gin-gonic/gin"
 )
 
@@ -17,6 +18,7 @@ func main() {
 		AllowCredentials: true,
 		MaxAge:           12 * time.Hour,
 	}))
-	infraestructure.Init(r)
+	products.Init(r)
+	users.Init(r)
 	r.Run(":8080")
 }
