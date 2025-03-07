@@ -5,7 +5,7 @@ import (
 )
 
 type Product struct {
-	ProductID   int       `json:"product_id" validate:"required"`
+	ProductID   int       `json:"product_id"`
 	Name        string    `json:"name" validate:"required,min=3,max=100"`
 	Description string    `json:"description" validate:"required,min=10,max=500"`
 	Price       float64   `json:"price" validate:"required,gt=0"`
